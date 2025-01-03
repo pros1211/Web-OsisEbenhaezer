@@ -28,29 +28,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid rgb(142, 17, 17) 1px;
+    border-bottom: solid rgb(206, 206, 206) 1px;
     width: 100%;
     height: 5rem;
     background-color: whitesmoke;
     margin-bottom: 2rem;
+    /* top: 0px;
+    position: sticky; */
   }
   nav .navigation-menu {
     list-style: none;
     display: flex;
     padding: 1rem;
+    padding-right: 6rem;
   }
   nav .navigation-menu li a {
     color: black;
     font-family: "inter", sans-serif;
-    font-size: 1rem;
+    font-size: 17.5px;
     font-weight: 600;
-    margin-right: 1rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
   }
   nav .navigation-menu li a:hover {
     color: rgb(142, 17, 17);
-    font-size: 17.5px;
-    transition: all 0.3s;
+    font-size: 19px;
+    transition: all 0.1s;
+    /* kasi jarak antara tulisan ama garisnya */
+    border-bottom: solid rgb(142, 17, 17) 2px;
   }
+  
   /* nav .navigation-menu li a::after:hover {
     content: " ";
     display: block;
@@ -96,6 +103,8 @@
   footer {
     background-color: rgb(142, 17, 17);
     width: 100%;
+    padding-top: 1.8rem;
+    padding-bottom: 1.5rem;
     margin-top: 3rem;
     display: flex;
     justify-content: space-around;
@@ -105,15 +114,19 @@
     padding: 1rem;
   }
   .column1-footer .title-footer {
+    /* jenis fontnya pake hussar bold */
     font-size: 35px;
+    padding-bottom: 8px;
     text-transform: uppercase;
     font-weight: 600;
     color: white;
     margin-top: 1.2rem;
   }
   .column1-footer .alamat {
+    /* ini ke bawah pake font Sukar */
     color: white;
     font-size: 18px;
+    padding-bottom: 1rem;
   }
   .column1-footer .social-media-footer {
     color: white;
@@ -124,6 +137,7 @@
     color: white;
     display: block;
     font-size: 20px;
+    padding-bottom: 0.8rem;
   }
   .column2-footer {
     display: flex;
