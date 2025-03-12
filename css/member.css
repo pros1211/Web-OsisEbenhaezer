@@ -1,0 +1,771 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 0.8rem 3%;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: rgb(142, 17, 17);
+  margin-bottom: 3rem;
+  z-index: 9999;
+}
+nav .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 100%;
+}
+nav .logo .logo-osis {
+  flex: 2;
+  max-width: 70px;
+  max-height: 70px;
+}
+nav .logo .logo-binbak {
+  flex: 1;
+  max-width: 50px;
+  max-height: 50px;
+  aspect-ratio: 1/1;
+}
+nav .navigation-menu {
+  display: flex;
+  align-items: baseline;
+}
+nav .navigation-menu li {
+  list-style: none;
+  margin: 0 8px;
+  cursor: pointer;
+}
+nav .navigation-menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-family: "inter", sans-serif;
+  text-transform: capitalize;
+  font-weight: 600;
+  transition: linear 0.2s;
+  display: inline-flex;
+}
+
+nav .navigation-menu .dropdown-menu {
+  position: relative;
+}
+nav .navigation-menu .dropdown-menu a {
+  width: max-content;
+  display: block;
+}
+nav .navigation-menu .dropdown-menu a .arrow {
+  transform: translateY(6px);
+}
+nav .navigation-menu .dropdown-menu .sub-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100%+0.25rem);
+  padding: 0.5rem;
+  background-color: rgb(142, 17, 17);
+  transform: translateX(-10px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: linear 0.2s;
+}
+nav .navigation-menu .dropdown-menu > a:focus + .sub-menu {
+  opacity: 1;
+}
+nav .navigation-menu .dropdown-menu .sub-menu li a {
+  font-size: 0.7rem;
+}
+nav .navigation-menu .dropdown-menu .sub-menu li a:hover {
+  color: rgb(235, 179, 179);
+}
+
+nav .navigation-menu .dropdown-menu .sub-menu li a::after {
+  transform: scaleX(0);
+}
+nav .navigation-menu li a:hover {
+  font-size: 1.1rem;
+}
+nav .navigation-menu li a::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 8px;
+  transform: scaleX(0);
+}
+nav .navigation-menu li a:hover::after {
+  transform: scaleX(0.7);
+}
+/* hamburger menu */
+.menu-toggle-button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  position: relative;
+}
+.menu-toggle-button input {
+  position: absolute;
+  width: 40px;
+  left: -6px;
+  top: -2px;
+  height: 27px;
+  opacity: 0;
+  cursor: pointer;
+}
+.menu-toggle-button span {
+  display: block;
+  transition: linear 0.2s;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
+/* hamburger menu animation */
+.menu-toggle-button span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle-button span:nth-child(4) {
+  transform-origin: 0 0;
+}
+.menu-toggle-button input:checked ~ span:nth-child(2) {
+  transform: rotate(40deg) translate(0px, -3px);
+}
+.menu-toggle-button input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+  opacity: 0;
+}
+.menu-toggle-button input:checked ~ span:last-child {
+  transform: rotate(-40deg);
+}
+/* member section */
+.member-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: 12rem;
+  font-family: "alata", sans-serif;
+}
+.member-container h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.member-container img {
+  border-radius: 50%;
+  background-color: rgb(142, 17, 17);
+  padding: 1rem;
+  object-fit: contain;
+}
+/* pembina section */
+.member-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 10rem;
+}
+.member-container #pembina {
+  margin-bottom: 5rem;
+}
+.member-container #pembina img {
+  width: 450px;
+  height: 450px;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+.member-container #pembina h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.member-container .profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.member-container #ketua-wakil .profile-container .ketua {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  > img {
+    width: 400px;
+    height: 400px;
+    transform: rotate(5deg);
+  }
+}
+
+.member-container #ketua-wakil .profile-container .wakil {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  > img {
+    width: 400px;
+    height: 400px;
+  }
+}
+.member-container #ketua-wakil .profile-container .ketua h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.member-container #ketua-wakil .profile-container .wakil h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.member-container #ketua-wakil .profile-container p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.member-container .profile-container .sekretaris {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  > img {
+    width: 400px;
+    height: 400px;
+    transform: rotate(5deg);
+  }
+}
+.member-container .profile-container .bendahara {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  > img {
+    width: 400px;
+    height: 400px;
+    transform: rotate(-5deg);
+  }
+}
+.member-container .tugas-pengurus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.member-container .tugas-pengurus p {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.member-container .departemen-container {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-bottom: 4rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.member-container .departemen-container .ketua-departemen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  > img {
+    width: 400px;
+    height: 400px;
+  }
+}
+.member-container .departemen-container .ketua-departemen img {
+  margin-top: 1.5rem;
+}
+.member-container .departemen-container .ketua-departemen h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  line-height: 1.7;
+}
+.member-container .departemen-container .ketua-departemen p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.member-container .tugas-departemen {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.member-container .tugas-departemen p {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.member-container .bidang-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+.member-container .bidang-container > h1 {
+  margin-top: 1.5rem;
+}
+.member-container .bidang-container .pengertian-bidang {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+.member-container .bidang-container .pengertian-bidang p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.member-container .bidang-container .program-kerja {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+.member-container .bidang-container .program-kerja p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.member-container h1 {
+  text-align: center;
+}
+.member-container .jenis-bidang {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: nowrap;
+}
+.member-container .jenis-bidang h2 {
+  line-height: 2;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.member-container .bidang-container .anggota-bidang-1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+.member-container .bidang-container .ketua-bidang {
+  margin-bottom: 2rem;
+}
+.member-container .bidang-container .ketua-bidang img {
+  width: 430px;
+  height: 430px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.member-container .bidang-container .ketua-bidang h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.member-container .bidang-container .ketua-bidang p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.member-container .bidang-container .anggota-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+.member-container .bidang-container .anggota-container img {
+  width: 400px;
+  height: 400px;
+}
+.member-container .bidang-container .anggota-container h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.member-container .bidang-container .anggota-container p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* footer section */
+.footer-container {
+  width: 100%;
+  background: rgb(142, 17, 17);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 30vh;
+}
+footer {
+  width: 100%;
+  background: rgb(142, 17, 17);
+  padding: 1rem;
+  margin-top: auto;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(142, 17, 17);
+}
+footer .footer-content .column1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: 60%;
+}
+footer .footer-content .column1 h1 {
+  font-family: "alata", sans-serif;
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+footer .footer-content .column1 p {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+footer .footer-content .column1 .social-media-container {
+  margin: 0.5rem 0;
+}
+footer .footer-content .column1 .social-media-container .social-media li {
+  list-style: none;
+}
+footer .footer-content .column1 .social-media-container .social-media li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+}
+footer .footer-content .column2 {
+  width: 100%;
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-content .column2 .logo-binbak-footer {
+  flex-basis: 40%;
+  width: 20%;
+  height: 20%;
+}
+footer .footer-content .column2 .logo-osis-footer {
+  flex-basis: 50%;
+  width: 25%;
+  height: 25%;
+}
+/* media query */
+@media (min-width: 461px) {
+  nav .navigation-menu .sidebar1 {
+    display: none;
+  }
+  nav .navigation-menu .sidebar2 {
+    display: none;
+  }
+  nav .navigation-menu a .home-logo,
+  .event-logo,
+  .Member-logo,
+  .about-logo,
+  .Gallery-logo,
+  .dudu-logo {
+    display: none;
+  }
+}
+
+@media (min-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1320px) {
+  html {
+    font-size: 75%;
+  }
+  .member-container .member-container #pembina img {
+    width: 350px;
+    height: 350px;
+  }
+  .member-container #ketua-wakil img {
+    width: 300px;
+    height: 300px;
+  }
+  .member-container .departemen-container img {
+    width: 300px;
+    height: 300px;
+  }
+  .member-container .bidang-container .ketua-bidang img {
+    width: 300px;
+    height: 300px;
+  }
+  .member-container .bidang-container .anggota-container img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html {
+    font-size: 65%;
+  }
+  .member-container #pembina img {
+    width: 350px;
+    height: 350px;
+  }
+  .member-container #ketua-wakil img {
+    width: 300px;
+    height: 300px;
+  }
+  .member-container .departemen-container img {
+    width: 300px;
+    height: 300px;
+  }
+  .member-container .bidang-container .ketua-bidang img {
+    width: 300px;
+    height: 300px;
+  }
+  .member-container .bidang-container .anggota-container img {
+    width: 230px;
+    height: 230px;
+  }
+}
+@media (min-width: 350px) and (max-width: 460px) {
+  html {
+    font-size: 55%;
+  }
+  .menu-toggle-button {
+    display: inline-flex;
+  }
+  nav .navigation-menu {
+    position: absolute;
+    right: 0;
+    top: 8rem;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    min-height: 80vh;
+    background-color: rgb(142, 17, 17);
+    z-index: -1;
+    transform: translateX(100%);
+    transition: 300ms ease-in-out;
+    opacity: 0;
+    padding: 5px 1em;
+  }
+  nav .navigation-menu .dropdown-menu {
+    display: none;
+  }
+  nav .navigation-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  nav .navigation-menu li a {
+    font-size: 1.8rem;
+    text-align: center;
+    display: inline-flex;
+    align-items: baseline;
+  }
+  nav .navigation-menu .sidebar1 .dropdown-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.85rem;
+    border-radius: 0.5rem;
+    gap: 1em;
+  }
+  nav .navigation-menu .sidebar2 .dropdown-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.85rem;
+    border-radius: 0.5rem;
+    gap: 1em;
+  }
+  nav .navigation-menu li a svg {
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: translateY(6px);
+  }
+  nav .navigation-menu .dropdown-btn svg {
+    margin: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  nav .navigation-menu .sidebar1 .dropdown-btn span {
+    flex-grow: 0.5;
+    font-size: 2rem;
+    font-family: "inter", sans-serif;
+    font-weight: 500;
+    margin-left: 7px;
+  }
+  nav .navigation-menu .sidebar2 .dropdown-btn span {
+    flex-grow: 0.5;
+    font-size: 2rem;
+    font-family: "inter", sans-serif;
+    font-weight: 500;
+    margin-left: 7px;
+  }
+  .dropdown-btn {
+    width: 100%;
+    text-align: center;
+    background: rgb(142, 17, 17);
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+  }
+  nav .navigation-menu .sidebar1 .sub-menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 300ms ease-in-out;
+    > div {
+      overflow: hidden;
+    }
+  }
+  nav .navigation-menu .sidebar2 .sub-menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 300ms ease-in-out;
+    > div {
+      overflow: hidden;
+    }
+  }
+  nav .navigation-menu .sub-menu div > li a {
+    font-size: 1.8rem;
+  }
+  nav .navigation-menu .sidebar1 .sub-menu.show {
+    grid-template-rows: 1fr;
+  }
+  nav .navigation-menu .sidebar2 .sub-menu.show {
+    grid-template-rows: 1fr;
+  }
+  nav .navigation-menu.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .member-container h1 {
+    font-size: 2.5rem;
+  }
+  .member-container #pembina img {
+    width: 250px;
+    height: 250px;
+  }
+  .member-container #ketua-wakil .profile-container .ketua img {
+    width: 150px;
+    height: 150px;
+  }
+  .member-container #ketua-wakil .profile-container .wakil img {
+    width: 150px;
+    height: 150px;
+  }
+  .member-container #departemen img {
+    height: 200px;
+    width: 200px;
+  }
+  .member-container .bidang-container .ketua-bidang img {
+    width: 200px;
+    height: 200px;
+  }
+  .member-container .bidang-container .anggota-container .anggota2 {
+    margin: 0 0.5rem 0;
+  }
+  .member-container .bidang-container .anggota-container img {
+    width: 130px;
+    height: 130px;
+  }
+  .member-container .tugas-pengurus p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  .member-container .tugas-departemen p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  .member-container .bidang-container .pengertian-bidang p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  .member-container .bidang-container .program-kerja p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 380px) {
+  .member-container .bidang-container .anggota-container img {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  .member-container .bidang-container .anggota-container img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .member-container #pembina img {
+    width: 350px;
+    height: 350px;
+  }
+  .member-container #ketua-wakil img {
+    width: 300px;
+    height: 300px;
+  }
+  .member-container .departemen-container img {
+    width: 300px;
+    height: 300px;
+  }
+  .member-container .bidang-container .ketua-bidang img {
+    width: 300px;
+    height: 300px;
+  }
+  .member-container .bidang-container .anggota-container img {
+    width: 230px;
+    height: 230px;
+  }
+}
