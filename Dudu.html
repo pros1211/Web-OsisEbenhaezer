@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <link />
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, height=device-height, user-scalable=no"
-    />
-    <title>EBNHZR|Bina Bakti 3</title>
-    <!-- google font -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EBNHZR|DUDU</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Alata&family=Inter:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
-    />
-    <!-- swiperjs -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <!-- font awesome -->
     <link
@@ -29,11 +19,11 @@
       referrerpolicy="no-referrer"
     />
     <!-- link to css stylesheet -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/Dudu.css" />
   </head>
   <body>
     <!-- navigation -->
-    <nav>
+    <nav id="home">
       <!-- logo -->
       <div class="logo">
         <img src="css/logo-osis.png" alt="Osis EBNHZR logo" class="logo-osis" />
@@ -46,7 +36,7 @@
       <!-- navigation menu -->
       <ul class="navigation-menu">
         <li class="home-menu">
-          <a href="#home"
+          <a href="index.html"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               height="20px"
@@ -149,15 +139,8 @@
           <ul class="sub-menu">
             <li><a href="member.html#pembina">Pembina Osis</a></li>
             <li><a href="member.html#ketua-wakil">Ketua & Wakil Ketua</a></li>
-            <li>
-              <a href="member.html#bendahara-sekretaris"
-                >Sekretaris & Bendahara</a
-              >
-            </li>
-            <li><a href="member.html#departemen-DPD">Departemen PD</a></li>
-            <li>
-              <a href="member.html#departemen-kominfo">Departemen Kominfo</a>
-            </li>
+            <li><a href="member.html#departemen">Departemen</a></li>
+            <li><a href="member.html#bidang">bidang</a></li>
           </ul>
         </li>
         <li class="sidebar2">
@@ -235,7 +218,7 @@
           </a>
         </li>
         <li>
-          <a href="Dudu.html"
+          <a href="#"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               height="20px"
@@ -259,91 +242,32 @@
         <span></span>
       </div>
     </nav>
-    <section class="hero" id="home">
-      <main class="hero-content">
-        <div class="img-hero">
-          <img src="css/logo-osis.png" alt="logo periode sekarang" />
-        </div>
-        <div class="welcoming-text">
-          <h2 class="paragraf1">Welcome to</h2>
-          <h1 class="paragraf2">osis ebenhaezer</h1>
-          <h3 class="paragraf3">official website</h3>
-        </div>
-      </main>
+    <section class="container-comment">
+      <h1>Send your message here!</h1>
+      <p>
+        Note: first log in using a github account. if you don't have one then
+        create one <a href="https://github.com" class="github-link">here</a>.
+      </p>
+      <script
+        src="https://giscus.app/client.js"
+        data-repo="pros1211/Web-OsisEbenhaezer"
+        data-repo-id="R_kgDONjH76A"
+        data-category="Q&A"
+        data-category-id="DIC_kwDONjH76M4Cnu4G"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="noborder_light"
+        data-lang="id"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async
+        defer
+      ></script>
     </section>
-    <section class="vision-mission">
-      <h1>vision & mission</h1>
-      <div class="container-vision">
-        <div class="vision">
-          <h2>Vision</h2>
-          <h3>
-            Mewujudkan OSIS sebagai wadah bagi siswa-siswi untuk mengembangkan
-            potensi diri sebagai individu yang melayani, aktif, dan bertanggung
-            jawab, serta menjadi teladan dalam bersikap dengan menginterpretasi
-            kan nilai SMART dalam menjalankan tugas.
-          </h3>
-        </div>
-        <div class="mission">
-          <h2>Mission</h2>
-          <h3>Fusion</h3>
-          <ul>
-            <div class="column-1">
-              <li>Fellowship (Solidarity)</li>
-              <li>Unity</li>
-              <li>Skills</li>
-            </div>
-            <div class="column-2">
-              <li>Impact</li>
-              <li>Organization (Teamwork)</li>
-              <li>Nurturing (Character)</li>
-            </div>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="member">
-      <h1>Our members</h1>
-      <div class="Swiper2 mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="css/pembina.jpeg" alt="pembina-osis" />
-            <h3>Fellia Lathasa Aufa,S.Pd</h3>
-            <p>pembina</p>
-          </div>
-          <div class="swiper-slide">
-            <img src="image/1732109645027.png" alt="Ketua-Osis" />
-            <h3>Kayleen Ashleigh</h3>
-            <p>Ketua</p>
-          </div>
-          <div class="swiper-slide">
-            <img src="image/1732108152513.png" alt="Wakil-ketua" />
-            <h3>Kireina Hana</h3>
-            <p>Wakil Ketua</p>
-          </div>
-          <div class="swiper-slide">
-            <img src="image/Sekretaris.png" alt="sekretaris" />
-            <h3>Jorianne Abigail</h3>
-            <p>Sekretaris</p>
-          </div>
-          <div class="swiper-slide">
-            <img src="image/Bendahara.png" alt="bendahara" />
-            <h3>Agnes Natali</h3>
-            <p>Bendahara</p>
-          </div>
-          <div class="swiper-slide">
-            <img src="image/Ketua-DPD.png" alt="Ketua-DPD" />
-            <h3>Loula Stefanny</h3>
-            <p>Ketua DPD</p>
-          </div>
-          <div class="swiper-slide">
-            <img src="image/Departemen Kominfo.png" alt="ketua-kominfo" />
-            <h3>Jeyssen Nathanie</h3>
-            <p>Ketua Kominfo</p>
-          </div>
-        </div>
-      </div>
-      <a href="member.html">Meet the member</a>
-    </section>
+    <!-- footer section -->
     <section class="footer-container">
       <footer>
         <div class="footer-content">
@@ -356,7 +280,7 @@
             <div class="social-media-container">
               <ul class="social-media">
                 <li>
-                  <a href=""
+                  <a href="https://www.youtube.com/@SMAK3BinaBaktiBandung"
                     ><i class="fa-brands fa-youtube"></i> @osisebenhaezer_</a
                   >
                 </li>
@@ -367,7 +291,7 @@
                   >
                 </li>
                 <li>
-                  <a href=""
+                  <a href="https://www.instagram.com/osisebenhaezer_"
                     ><i class="fa-brands fa-instagram"></i> @osisebenhaezer</a
                   >
                 </li>
@@ -399,8 +323,6 @@
         </div>
       </footer>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/swiper.js" defer></script>
-    <script src="js/script2.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
