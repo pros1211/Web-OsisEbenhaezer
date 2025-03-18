@@ -524,25 +524,33 @@ footer .footer-content .column2 .logo-osis-footer {
   html {
     font-size: 75%;
   }
-  .member-container .member-container #pembina img {
+  .member-container #pembina img {
     width: 350px;
     height: 350px;
   }
-  .member-container #ketua-wakil img {
+  .member-container #ketua-wakil .profile-container .ketua img {
     width: 300px;
     height: 300px;
   }
-  .member-container .departemen-container img {
+  .member-container #ketua-wakil .profile-container .wakil img {
     width: 300px;
     height: 300px;
+  }
+  .member-container #bendahara-sekretaris .profile-container img {
+    width: 300px;
+    height: 300px;
+  }
+  .member-container .departemen-container .ketua-departemen img {
+    width: 320px;
+    height: 320px;
   }
   .member-container .bidang-container .ketua-bidang img {
     width: 300px;
     height: 300px;
   }
   .member-container .bidang-container .anggota-container img {
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
   }
 }
 @media (min-width: 800px) and (max-width: 850px) {
@@ -550,24 +558,39 @@ footer .footer-content .column2 .logo-osis-footer {
     font-size: 65%;
   }
   .member-container #pembina img {
-    width: 350px;
-    height: 350px;
-  }
-  .member-container #ketua-wakil img {
     width: 300px;
     height: 300px;
   }
-  .member-container .departemen-container img {
+  .member-container #ketua-wakil .profile-container .ketua img {
+    width: 250px;
+    height: 250px;
+  }
+  .member-container #ketua-wakil .profile-container .wakil img {
+    width: 280px;
+    height: 280px;
+  }
+  .member-container #bendahara-sekretaris img {
+    width: 280px;
+    height: 280px;
+  }
+  .member-container .departemen-container .ketua-departemen img {
     width: 300px;
     height: 300px;
   }
   .member-container .bidang-container .ketua-bidang img {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
   }
   .member-container .bidang-container .anggota-container img {
-    width: 230px;
-    height: 230px;
+    width: 260px;
+    height: 260px;
+  }
+  .member-container .bidang-container .anggota-container.humas img {
+    width: 245px;
+    height: 245px;
+  }
+  .member-container .bidang-container .anggota-container.humas .anggota2 {
+    margin: 0 1rem 0;
   }
 }
 @media (min-width: 350px) and (max-width: 460px) {
@@ -690,8 +713,8 @@ footer .footer-content .column2 .logo-osis-footer {
     font-size: 2.5rem;
   }
   .member-container #pembina img {
-    width: 250px;
-    height: 250px;
+    width: 210px;
+    height: 210px;
   }
   .member-container #ketua-wakil .profile-container .ketua img {
     width: 150px;
@@ -701,20 +724,34 @@ footer .footer-content .column2 .logo-osis-footer {
     width: 150px;
     height: 150px;
   }
+  .member-container #bendahara-sekretaris .profile-container img {
+    width: 150px;
+    height: 150px;
+  }
   .member-container #departemen img {
-    height: 200px;
+    height: 180px;
+    width: 180px;
+  }
+  .member-container .departemen-container .ketua-departemen img {
     width: 200px;
+    height: 200px;
+    padding: 0.5rem;
   }
   .member-container .bidang-container .ketua-bidang img {
     width: 200px;
     height: 200px;
+    margin-bottom: 1.5rem;
+  }
+  .member-container .bidang-container .anggota-container {
+    display: inline-block;
   }
   .member-container .bidang-container .anggota-container .anggota2 {
-    margin: 0 0.5rem 0;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   .member-container .bidang-container .anggota-container img {
-    width: 130px;
-    height: 130px;
+    width: 200px;
+    height: 200px;
   }
   .member-container .tugas-pengurus p {
     font-size: 1.2rem;
@@ -733,13 +770,7 @@ footer .footer-content .column2 .logo-osis-footer {
     line-height: 1.5;
   }
 }
-@media (max-width: 380px) {
-  .member-container .bidang-container .anggota-container img {
-    width: 120px;
-    height: 120px;
-  }
-}
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 799px) {
   html {
     font-size: 65%;
   }
@@ -749,23 +780,31 @@ footer .footer-content .column2 .logo-osis-footer {
   }
 
   .member-container #pembina img {
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
   }
-  .member-container #ketua-wakil img {
-    width: 300px;
-    height: 300px;
+  .member-container #ketua-wakil .profile-container .ketua img {
+    width: 250px;
+    height: 250px;
   }
-  .member-container .departemen-container img {
-    width: 300px;
-    height: 300px;
+  .member-container #ketua-wakil .profile-container .wakil img {
+    width: 250px;
+    height: 250px;
+  }
+  .member-container #bendahara-sekretaris img {
+    width: 250px;
+    height: 250px;
+  }
+  .member-container .departemen-container .ketua-departemen img {
+    width: 280px;
+    height: 280px;
   }
   .member-container .bidang-container .ketua-bidang img {
-    width: 300px;
-    height: 300px;
+    width: 260px;
+    height: 260px;
   }
   .member-container .bidang-container .anggota-container img {
-    width: 230px;
-    height: 230px;
+    width: 250px;
+    height: 250px;
   }
 }
