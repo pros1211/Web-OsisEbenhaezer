@@ -689,6 +689,10 @@ footer .footer-content .column2 .logo-osis-footer {
   .member {
     height: 290px;
   }
+  .member a{
+    transform: translateX(65vw);
+    width: 98px;
+  }
   .member .swiper-slide img {
     width: 100px;
     height: 120px;
@@ -848,6 +852,10 @@ footer .footer-content .column2 .logo-osis-footer {
   }
   .member {
     height: 310px;
+  }
+  .member a{
+    transform: translateX(65vw);
+    width: 98px;
   }
   .member .swiper-slide img {
     width: 100px;
