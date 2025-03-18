@@ -246,7 +246,7 @@ nav .navigation-menu li a:hover::after {
   > img {
     width: 400px;
     height: 400px;
-    transform: rotate(5deg);
+  
   }
 }
 .member-container .profile-container .bendahara {
