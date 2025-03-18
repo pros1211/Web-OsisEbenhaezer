@@ -869,6 +869,80 @@ footer .footer-content .column2 .logo-osis-footer {
     text-align: center;
     display: inline-flex;
   }
+  nav .navigation-menu li a:hover {
+    font-size: 2.2rem;
+  }
+  nav .navigation-menu .sidebar1 .dropdown-btn,
+  .sidebar2 .dropdown-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.85rem;
+    border-radius: 0.5rem;
+    gap: 1em;
+  }
+  nav .navigation-menu li a svg {
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: 3rem;
+    height: 3rem;
+  }
+  nav .navigation-menu .dropdown-btn svg {
+    margin: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  nav .navigation-menu .sidebar1 .dropdown-btn span {
+    flex-grow: 0.5;
+    font-size: 2.2rem;
+    font-family: "inter", sans-serif;
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  nav .navigation-menu .sidebar2 .dropdown-btn span {
+    flex-grow: 0.5;
+    font-size: 2.2rem;
+    font-family: "inter", sans-serif;
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  .dropdown-btn {
+    width: 100%;
+    text-align: center;
+    background: rgb(142, 17, 17);
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+  }
+  nav .navigation-menu .sidebar1 .sub-menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 300ms ease-in-out;
+    > div {
+      overflow: hidden;
+    }
+  }
+  nav .navigation-menu .sidebar2 .sub-menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 300ms ease-in-out;
+    > div {
+      overflow: hidden;
+    }
+  }
+  nav .navigation-menu .sidebar1 .sub-menu.show {
+    grid-template-rows: 1fr;
+  }
+
+  nav .navigation-menu .sidebar2 .sub-menu.show {
+    grid-template-rows: 1fr;
+  }
+
+  nav .navigation-menu.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
   .hero {
     height: 100px;
     min-height: 30vh;
@@ -917,7 +991,8 @@ footer .footer-content .column2 .logo-osis-footer {
     width: 98px;
   }
   .member .swiper-slide img {
-    width: 100px;
-    height: 110px;
+    width: 110px;
+    height: 115px;
     object-fit: contain;
   }
+}
