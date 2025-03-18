@@ -869,3 +869,55 @@ footer .footer-content .column2 .logo-osis-footer {
     text-align: center;
     display: inline-flex;
   }
+  .hero {
+    height: 100px;
+    min-height: 30vh;
+    margin: 10rem auto 0;
+  }
+  .hero .hero-content .img-hero img {
+    width: 180px;
+    height: 180px;
+  }
+  .hero .hero-content .welcoming-text .paragraf1 {
+    font-size: 2.3rem;
+  }
+  .hero .hero-content .welcoming-text .paragraf2 {
+    font-size: 2.3rem;
+  }
+  .hero .hero-content .welcoming-text .paragraf3 {
+    font-size: 2rem;
+  }
+  .vision-mission .container-vision {
+    padding: 0;
+  }
+  .vision-mission .container-vision .vision {
+    max-width: 45vw;
+    height: 160px;
+    margin-right: 0.3rem;
+    > h2 + h3 {
+      font-size: 0.8rem;
+    }
+  }
+  .vision-mission .container-vision .mission {
+    max-width: 40vw;
+    height: 160px;
+    padding: 1rem;
+    h3 + ul > div {
+      padding: 0.8rem;
+    }
+  }
+  .vision-mission .container-vision .mission ul .column-2 {
+    padding: 0.8rem;
+  }
+  .member {
+    height: 310px;
+  }
+  .member a{
+    transform: translateX(67vw);
+    width: 98px;
+  }
+  .member .swiper-slide img {
+    width: 100px;
+    height: 110px;
+    object-fit: contain;
+  }
